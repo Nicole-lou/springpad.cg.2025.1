@@ -53,7 +53,7 @@ Já em `view.html` os botões `[Editar]` e `[Apagar]` só aparecem para o propri
 
 ---
 
-### Apagar pad
+## Apagar pad
 
 Somente o proprietário do pad, logado, pode apagar.
 
