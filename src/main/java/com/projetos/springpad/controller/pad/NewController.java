@@ -22,10 +22,6 @@ public class NewController {
             Model model
     ) {
 
-        System.out.println("\n\n\n");
-        System.out.println(ownerUid);
-        System.out.println("\n\n\n");
-
         // Redireciona para a raiz se o cookie não existir ou estiver vazio
         if (ownerUid == null || ownerUid.isEmpty()) {
             return "redirect:/";
