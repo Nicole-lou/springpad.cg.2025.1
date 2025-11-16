@@ -34,6 +34,8 @@ Ajuste o template da página inicial para listar os "pads":
 
  - [ ] Edite `src/main/resources/templates/home.html`
 
+---
+
 ## Detalhes de um pad
 
 Ao clicar no título de um "pad" na "home", acessa a rota `/view/{pad.id}` que exibe detalhes do registro clicado.
@@ -48,3 +50,5 @@ Para implementar, insira ou ajuste as partes:
 No `PadsRepository.java`, adicionamos o método `findByIdWithOwner()` para obter os dados do "pad" e o respectivo "owner".
 
 Já em `view.html` os botões `[Editar]` e `[Apagar]` só aparecem para o proprietário do "pad" exibido.
+
+---
