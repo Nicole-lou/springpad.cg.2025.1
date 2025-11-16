@@ -37,9 +37,10 @@ public class ViewController {
             return "redirect:/"; // Redireciona para raiz se não encontrado ou status inválido
         }
 
+        // Lista o pad obtido
         PadsModel pad = optionalPad.get();
 
-        // Formata a data no Java (padrão: dd/MM/yyyy às HH:mm)
+        // Formata a data para o padrão: dd/MM/yyyy às HH:mm
         String formattedCreatedAt = pad.getCreatedAt().format(
                 DateTimeFormatter.ofPattern("dd/MM/yyyy 'às' HH:mm")
         );
@@ -52,7 +53,7 @@ public class ViewController {
 
         // Adiciona atributos ao model
         model.addAttribute("title", pad.getTitle());
-        model.addAttribute("pad", pad); // Mantém o objeto completo para outros campos
+        model.addAttribute("pad", pad); // Objeto completo
         model.addAttribute("formattedCreatedAt", formattedCreatedAt); // Data formatada como string
         model.addAttribute("isOwner", isOwner); // Flag para exibir botões no template
 
