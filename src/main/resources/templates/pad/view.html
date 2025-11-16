@@ -8,11 +8,9 @@ Página da rota "/view/{pad.id}" que exibe o pad selecionado em detalhes.
 <h2>${title}</h2>
 
 <div>
-    <p>${pad.content}</p> <#-- Conteúdo completo -->
-    <p>Criado:
-    <ul>
-        <li>Em: ${formattedCreatedAt}</li>
-        <li>Por:
+    <textarea name="padcontent" id="padcontent" cols="100%" rows="10" class="form-control pad-content" readonly>${pad.content}</textarea>
+
+    <p class="mt-2">Criado ${formattedCreatedAt} por:
             <#if pad.ownerModel??>
             <a href="/owner/${pad.ownerModel.id}"
                title="Clique para ver detalhes de '${pad.ownerModel.displayName}'...">
@@ -21,8 +19,8 @@ Página da rota "/view/{pad.id}" que exibe o pad selecionado em detalhes.
             </a>
             <#else>
             Anônimo
-        </#if></li>
-    </ul>
+        </#if>
+    </p>
 </div>
 
 <div>

@@ -1,6 +1,6 @@
 /**
  * com.projetos.springpad.model.PadsModel
- * Modela oa entidade "pads"
+ * Modela a entidade "pads"
  */
 
 package com.projetos.springpad.model;
@@ -22,6 +22,7 @@ public class PadsModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Builder.Default
     @Column(name = "createdAt", nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
@@ -34,6 +35,7 @@ public class PadsModel {
     @Column(nullable = false)
     private Long owner;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "ENUM('ON', 'OFF', 'DEL')", nullable = false)
     private Status status = Status.ON;

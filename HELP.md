@@ -38,7 +38,7 @@ Ajuste o template da página inicial para listar os "pads":
 
 ## Detalhes de um pad
 
-Ao clicar no título de um "pad" na "home", acessa a rota `/view/{pad.id}` que exibe detalhes do registro clicado.
+Ao clicar no título de um "pad" na "home", acessa a rota `/ver/{pad.id}` que exibe detalhes do registro clicado.
 Também exibe botões `[Editar]` e `[Apagar]` se o "pad" pertence ao usuário logado.
 
 Para implementar, insira ou ajuste as partes:
@@ -66,5 +66,21 @@ Para implementar, insira ou ajuste as partes:
  - [ ] Edite `src/main/resources/templates/home.html`
 
 Em `home.html`, adicionamos um alerta de confirmação da exclusão, quando isso acontecer.
+
+---
+
+## Criar um pad
+
+Ao acessar a rota `/pad/novo` o usuário logado pode cadastrar um novo pad na sua biblioteca.
+
+Para implementar, insira ou ajuste as partes:
+
+ - [ ] Edite `com.projetos.springpad.model.PadsModel.java`
+ - [ ] Crie `com.projetos.springpad.controller.pad.NewController.java`
+ - [ ] Edite `src/main/resources/static/css/style.css`
+
+Os ajustes em `PadsModel.java` corrigem uma falha na inserção da data em `pad.createdAt`.
+
+Em `style.css` apenas adicionamos a classe para ajustar a fonte do `textarea`.
 
 ---

@@ -23,7 +23,7 @@ public class ViewController {
     @Autowired
     private PadsRepository padsRepository;
 
-    @GetMapping("/view/{id}")
+    @GetMapping("/ver/{id}")
     public String viewPad(
             @PathVariable Long id,
             Model model,

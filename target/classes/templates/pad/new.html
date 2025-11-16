@@ -6,7 +6,18 @@ Página da rota "/pad/new" para cadastrar um novo pad.
 
 <#include "../layouts/header.html">
 
-<h2>Novo Pad</h2>
+<h2>${title}</h2>
 <p>Preencha os campos abaixo para cadastrar um novo pad.</p>
+<form action="/pad/novo" method="post">
+    <div>
+        <input type="text" name="padtitle" id="padtitle" class="form-control" placeholder="Título do Pad">
+    </div>
+    <div>
+        <textarea name="padcontent" id="padcontent" cols="100%" rows="10" class="form-control pad-content" placeholder="Conteúdo do Pad"></textarea>
+    </div>
+    <div class="mt-2">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+</form>
 
 <#include "../layouts/footer.html">
