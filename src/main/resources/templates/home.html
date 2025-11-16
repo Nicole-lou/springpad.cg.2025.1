@@ -17,3 +17,10 @@ Página da rota "/", a página inicial do site.
 </#list>
 
 <#include "layouts/footer.html">
+
+<#-- Exibe alert se houver mensagem de sucesso (ex.: de delete) -->
+<#if successMessage??>
+<script>
+    alert("${successMessage}");
+</script>
+</#if>

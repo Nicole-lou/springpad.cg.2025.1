@@ -144,3 +144,6 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Luferat
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 54 more
+2025-11-16 13:23:06.297607-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OADS" not found; SQL statement:
+update oads set status = 'ON' [42102-232]

@@ -52,3 +52,19 @@ No `PadsRepository.java`, adicionamos o método `findByIdWithOwner()` para obter
 Já em `view.html` os botões `[Editar]` e `[Apagar]` só aparecem para o proprietário do "pad" exibido.
 
 ---
+
+### Apagar pad
+
+Somente o proprietário do pad, logado, pode apagar.
+
+Lembrando que "apagar" é apenas "marcar" o registro com `status.DEL`.
+
+Para implementar, insira ou ajuste as partes:
+
+ - [ ] Crie `com.projetos.springpad.controller.pad.DeleteController.java`
+ - [ ] Crie `src/main/resources/templates/pad/view.html`
+ - [ ] Edite `src/main/resources/templates/home.html`
+
+Em `home.html`, adicionamos um alerta de confirmação da exclusão, quando isso acontecer.
+
+---

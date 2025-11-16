@@ -30,7 +30,7 @@ Página da rota "/view/{pad.id}" que exibe o pad selecionado em detalhes.
     <#-- Exibe os botões somente se está logado e é proprietário do pad -->
     <#if isOwner>
         <a href="/edit/${pad.id}" class="btn btn-warning btn-sm">Editar</a>
-        <a href="/delete/${pad.id}" class="btn btn-danger btn-sm">Apagar</a>
+    <a href="/delete/${pad.id}" class="btn btn-danger btn-sm" onclick='return confirm(`Tem certeza que deseja apagar "${pad.title}" permanentemente?`);'>Apagar</a>
     </#if>
 </div>
 
