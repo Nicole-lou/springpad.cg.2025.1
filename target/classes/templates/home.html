@@ -5,8 +5,15 @@ Página da rota "/", a página inicial do site.
 
 <#include "layouts/header.html">
 
-<#-- isso é um comentário -->
 <h2>${title}</h2>
-<p>Lorem ipsum</p>
+
+<#list pads as pad>
+<hr>
+<div>
+    <h3><a href="/view/${pad.id}" title="Clique para ver detalhes de ${pad.title}...">${pad.title}</a></h3>
+    <p>${pad.contentSummary}... <#-- Exibe o resumo com reticências --></p>
+    <small>Por: <a href="/owner" title="Clique para ver detalhes de '${pad.ownerDisplayName}'..."><img src="${pad.ownerPhotoURL}" alt="Foto" class="rounded-circle" width="30" referrerpolicy="no-referrer"> ${pad.ownerDisplayName}</a> </small>
+</div>
+</#list>
 
 <#include "layouts/footer.html">

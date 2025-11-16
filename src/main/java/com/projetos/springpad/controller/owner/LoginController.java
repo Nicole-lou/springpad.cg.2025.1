@@ -32,10 +32,6 @@ public class LoginController {
 
         String message;
 
-        // System.out.println("\n\n\n");
-        // System.out.println(data);
-        // System.out.println("\n\n\n");
-
         // Sanitização básica
         String uid = data.get("uid").toString().trim();
         String email = data.get("email").toString().trim().toLowerCase();
@@ -71,11 +67,11 @@ public class LoginController {
 
         // Criar cookie seguro com o UID
         ResponseCookie cookie = ResponseCookie.from("owner_uid", uid)
-                .httpOnly(true)       // Protege contra acesso via JavaScript
-                .secure(true)         // Envia apenas via HTTPS (ajuste para false em dev local se necessário)
-                .path("/")            // Disponível em todo o app
-                .maxAge(3600 * 24 * 10)    // Expira em 10 dias (ajuste conforme necessário)
-                .sameSite("Strict")   // Protege contra CSRF
+                .httpOnly(true)                           // Protege contra acesso via JavaScript
+                .secure(true)                             // Envia apenas via HTTPS (ajuste para false em dev local se necessário)
+                .path("/")                                // Disponível em todo o app
+                .maxAge(3600 * 24 * 10)     // Expira em 10 dias (ajuste conforme necessário)
+                .sameSite("Strict")                       // Protege contra CSRF
                 .build();
 
         // Retornar resposta com cookie no header
@@ -92,10 +88,6 @@ public class LoginController {
             @RequestBody Map<String, Object> data, // JSON do front → Map,
             HttpServletResponse response
     ) {
-
-        // System.out.println("\n\n\n");
-        // System.out.println(data);
-        // System.out.println("\n\n\n");
 
         // Criar cookie para expirar o existente (maxAge=0)
         ResponseCookie cookie = ResponseCookie.from("owner_uid", "")
