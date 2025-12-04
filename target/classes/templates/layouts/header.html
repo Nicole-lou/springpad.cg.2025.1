@@ -68,10 +68,10 @@ Inclua no começo de cada página com:
                 </ul>
 
                 <#-- Formulário de pesquisa -->
-                <form class="d-flex p-1">
+                <form class="d-flex p-1" method="get" action="/procurar" name="templatesearch">
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Procurar...">
-                        <button class="btn btn-light" type="button"><i class="bi bi-search"></i></button>
+                        <input class="form-control" type="search" name="q" placeholder="Procurar nos Pads..." required minlength="2">
+                        <button class="btn btn-light" type="submit"><i class="bi bi-search"></i></button>
                     </div>
                 </form>
 
