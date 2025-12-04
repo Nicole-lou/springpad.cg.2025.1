@@ -5,6 +5,7 @@
 
 package com.projetos.springpad.model;
 
+import com.sun.security.auth.module.UnixSystem;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -46,6 +47,10 @@ public class PadsModel {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner", insertable = false, updatable = false)
     private OwnerModel ownerModel;
+
+    public UnixSystem getOwnerModel() {
+        return null;
+    }
 
     public enum Status {
         ON, OFF, DEL
